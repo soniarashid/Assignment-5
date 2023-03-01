@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+ <title>Applying without object(module 5)</title>
+</head>
+
+<body class="bg-neutral-700">
+ <header>
+  <div class="bg-black text-white" style="height: 320px;">
+   <h1 class="text-center text-6xl " style="padding-top: 1.5em;">Select Top Five Player in FIFA</h1>
+  </div>
+ </header>
+ <main class=" w-9/12 mx-auto  mt-24 pb-20 ">
+  <div class="grid grid-cols-4 gap-6 ">
+   <!-- 1 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/Lionel Messi PSG 030922.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Lionel Messi
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true; ">Select</button>
+     </div>
+    </div>
+   </div>
+   <!-- 2 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/220930165943-01-neymar.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Neymar Jr
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true; ">Select</button>
+     </div>
+    </div>
+   </div>
+   <!-- 3 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/mbappe.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Kylian Mbappé
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true; ">Select</button>
+     </div>
+    </div>
+   </div>
+   <!-- Selection process -->
+   <div class="bg-neutral-900 rounded-xl w-64">
+    <h2 class="text-center text-white text-2xl "
+     style="text-decoration-line: underline;text-decoration-color: orangered; text-decoration-style: wavy;">Player
+     Selection <span id="select-number">0</span> </h2>
+    <table class="table table-zebra w-full mt-10">
+     <thead>
+      <tr>
+       <th>No</th>
+       <th>players Name</th>
+      </tr>
+     </thead>
+     <tbody id="select-player">
+
+     </tbody>
+    </table>
+   </div>
+   <!-- 5 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/vitor.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Vítor Machado
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true; ">Select</button>
+     </div>
+    </div>
+   </div>
+   <!-- 6 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/Sergio ramos.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Sergio Ramos
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true; ">Select</button>
+     </div>
+    </div>
+   </div>
+   <!-- 7 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/renato Sanches.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Renato Sanches
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600 " onclick="addToCart(this); this.disabled = true; ">Select</button>
+
+     </div>
+    </div>
+   </div>
+   <!-- Budget -->
+
+   <div>
+    <div class="container bg-neutral-900 rounded-xl w-64">
+     <h1 class="text-white py-4 text-center text-bold text-2xl"
+      style=" text-decoration-line: underline;text-decoration-color: orangered; text-decoration-style: wavy;">
+      Budget
+     </h1>
+     <div class="grid grid-cols-2 mb-4">
+      <div>
+       <h2 class="text-xl text-white pl-2">Per Player</h2>
+      </div>
+      <div class="w-1/2"> <input type="text" class="w-28 h-8" id="player-cost"> </div>
+     </div>
+     <button type="button" class="btn bg-sky-600 ml-4" style="width: 13rem;" id="btn-calculate">Calculate</button>
+     <!-- Player Expense -->
+     <h5 class="text-start text-white text-xl py-3 pl-2">Player Expenses <span>$ <span
+        id="player-expense"></span></span> </h5>
+     <!-- Manager -->
+     <div class="grid grid-cols-2 mb-4">
+      <div>
+       <h2 class="text-xl text-white pl-2">Manager</h2>
+      </div>
+      <div class="w-1/2"> <input type="text" class="w-28 h-8" id="manager-cost"> </div>
+     </div>
+     <!-- Coach -->
+     <div class="grid grid-cols-2 mb-4">
+      <div>
+       <h2 class="text-xl text-white pl-2">Coach</h2>
+      </div>
+      <div class="w-1/2"> <input type="text" class="w-28 h-8" id="coach-cost"> </div>
+     </div>
+     <!-- calculate Total -->
+     <button type="button" class="btn bg-sky-600 ml-4" style="width: 13rem;" id="btn-calculateTotal">Calculate
+      Total</button>
+     <!-- total -->
+     <div class="grid grid-cols-2 mt-4">
+      <div>
+       <h2 class="text-xl text-white pl-2 pb-4">Total</h2>
+      </div>
+      <div class="w-1/2">
+       <h3 class="text-white text-xl"> $ <span id="Total-expense"></span></h3>
+      </div>
+     </div>
+    </div>
+   </div>
+
+
+   <!-- 9 -->
+   <div class="">
+    <div class="card w-56 bg-base-100 shadow-xl bg-neutral-900">
+     <figure><img src="Images/cristiano ronaldo.jpg" class="h-40 w-full" alt="Shoes" /></figure>
+     <div class="card-body mx-auto  text-white">
+      <h2 class="card-title text-center">
+       Cristiano Ronaldo
+      </h2>
+      <div class="card-actions justify-center">
+       <div>36 Goals</div>
+       <div> <span class="font-bold">.</span> 120 Assists</div>
+      </div>
+      <button class="btn btn-wide w-full bg-sky-600" onclick="addToCart(this); this.disabled = true;">Select</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  </div>
+  <footer class="mt-20 ">
+   <div class="border-t-2 border-grey-500">
+    <p class="text-center text-white text-xl mt-8">Copyright @ 2022 All Rights Reserved</p>
+   </div>
+  </footer>
+
+ </main>
+
+
+
+
+ <!-- link with js -->
+ <script src="JS/script.js"></script>
+ <script src="Js/calculation.js"></script>
+</body>
+
+</html>
